@@ -1,0 +1,135 @@
+/* General reset and styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.6)
+  );
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+}
+
+header input[type="text"] {
+  width: calc(100% - 70px);
+  max-width: 280px;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  border-radius: 16px 0 0 16px;
+  background-color: transparent;
+  color: #313131;
+  font-size: 15px;
+  font-weight: 300;
+  transition: 0.2s ease-out;
+}
+
+header input:focus {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+button {
+  color: #313131;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 0 16px 16px 0;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.location {
+  margin-bottom: 20px;
+  color: #313133;
+}
+
+.location .city {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.location .date {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.current {
+  margin-bottom: 20px;
+  color: #313131;
+}
+
+.current .temp {
+  font-size: 80px;
+  font-weight: 900;
+  text-shadow: 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.current .temp span {
+  font-weight: 500;
+}
+
+.current .weather {
+  font-size: 28px;
+  font-weight: 600;
+  text-shadow: 1px 2px rgba(0, 0, 0, 0.3);
+  font-style: italic;
+}
+
+@media screen and (max-width: 600px) {
+  header input[type="text"] {
+    width: 100%;
+    max-width: none;
+    border-radius: 16px;
+  }
+
+  button {
+    border-radius: 16px;
+  }
+}
